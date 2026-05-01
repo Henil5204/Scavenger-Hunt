@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Soft rounded pill behind the tag name on each hunt row.
+     Faint purple fill so it pops without being loud. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#1A8692F7" />   <!-- ~10% opacity purple -->
+    <corners android:radius="20dp" />
+</shape>

@@ -1,3 +1,79 @@
 <resources>
-    <string name="app_name">ScavengerHunt</string>
+    <string name="app_name">Scavenger Hunt</string>
+
+    <!-- auth -->
+    <string name="login_title">Welcome back</string>
+    <string name="login_subtitle">Sign in to continue your adventures</string>
+    <string name="signup_title">Create account</string>
+    <string name="signup_subtitle">A few details and you\'re hunting</string>
+    <string name="login">Login</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="signup_prompt">New here? Create an account</string>
+    <string name="signup">Sign Up</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="already_registered">Already have an account? Login</string>
+
+    <string name="error_empty_fields">Please fill in all fields</string>
+    <string name="error_password_mismatch">Passwords don\'t match</string>
+    <string name="error_password_short">Password should be at least 4 characters</string>
+    <string name="error_invalid_login">Wrong username or password</string>
+    <string name="error_username_taken">That username is already taken</string>
+    <string name="welcome_back">Welcome back, %1$s!</string>
+    <string name="account_created">Account created — you\'re in!</string>
+
+    <!-- list -->
+    <string name="my_hunts">My Hunts</string>
+    <string name="add_hunt">Add Hunt</string>
+    <string name="search_hint">Search by name or tag…</string>
+    <string name="empty_title">No hunts yet</string>
+    <string name="empty_subtitle">Tap the + button to add your first hunt</string>
+    <string name="logout">Logout</string>
+    <string name="logout_confirm_title">Log out?</string>
+    <string name="about">About</string>
+    <string name="sort_by">Sort by</string>
+    <string name="sort">Sort</string>
+    <string name="sort_newest">Newest first</string>
+    <string name="sort_name">Name (A–Z)</string>
+    <string name="sort_rating">Highest rated</string>
+    <string name="deleted">Deleted “%1$s”</string>
+    <string name="undo">Undo</string>
+
+    <!-- detail -->
+    <string name="address_label">ADDRESS</string>
+    <string name="city_label">CITY</string>
+    <string name="description_label">THE CLUE</string>
+    <string name="open_in_maps">Directions</string>
+    <string name="share">Share</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="delete_confirm_title">Delete this hunt?</string>
+    <string name="delete_confirm_message">This can\'t be undone.</string>
+    <string name="cancel">Cancel</string>
+    <string name="share_subject">Check out this scavenger hunt!</string>
+    <string name="share_template">%1$s\n\nTag: %2$s\nWhere: %3$s, %4$s\n\n%5$s</string>
+    <string name="mark_complete">Mark as Done</string>
+    <string name="mark_incomplete">Mark as Not Done</string>
+    <string name="completed_badge">DONE</string>
+    <string name="error_no_address">No address on this hunt</string>
+    <string name="error_no_maps_app">Couldn\'t find a maps app or browser</string>
+
+    <!-- add/edit -->
+    <string name="new_hunt">New Hunt</string>
+    <string name="edit_hunt">Edit Hunt</string>
+    <string name="hunt_name_hint">Hunt name</string>
+    <string name="tag_hint">Tag (e.g. landmark, food, art)</string>
+    <string name="address_hint">Street address</string>
+    <string name="city_hint">City</string>
+    <string name="description_hint">A clue or short description</string>
+    <string name="rating_label">Your rating</string>
+    <string name="save">Save Hunt</string>
+    <string name="error_name_required">Name is required</string>
+    <string name="hunt_saved">Saved!</string>
+
+    <!-- about -->
+    <string name="about_title">About</string>
+    <string name="about_heading">Scavenger Hunt</string>
+    <string name="about_version">Version 1.0</string>
+    <string name="about_body">A simple way to log interesting places and turn them into clues for friends. Add hunts you\'ve found, tag them, mark them done as you visit them, and share the clues with anyone.\n\nBuilt for COMP3074 — Mobile App Development.</string>
 </resources>

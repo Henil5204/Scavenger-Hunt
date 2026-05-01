@@ -1,7 +1,13 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+
+    <!-- Dark mode. Material3 DayNight handles most of it; just nudge the
+         status bar to a deeper teal so it doesn't blend with system UI. -->
     <style name="Base.Theme.ScavengerHunt" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">@color/brand_primary_light</item>
+        <item name="colorOnPrimary">@color/text_on_brand</item>
+        <item name="colorSecondary">@color/brand_accent</item>
+        <item name="android:statusBarColor">@color/brand_primary_dark</item>
     </style>
+
+    <style name="Theme.ScavengerHunt" parent="Base.Theme.ScavengerHunt" />
 </resources>

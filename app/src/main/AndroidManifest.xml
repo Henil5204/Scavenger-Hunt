@@ -2,7 +2,36 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!--
+        Android 11 (API 30) introduced "package visibility" — by default an app
+        can't see what OTHER apps are installed on the device. That broke our
+        "open in maps" feature because Intent.resolveActivity() was returning
+        null even when Google Maps was clearly installed.
+
+        Fix: declare exactly what kinds of apps we want to launch into.
+        Here we say "we want to find apps that handle geo: URIs and apps that
+        handle https: URLs (for the maps web fallback) and the share sheet".
+    -->
+    <queries>
+        <!-- maps apps: anyone who handles geo: -->
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="geo" />
+        </intent>
+        <!-- browsers (web fallback for directions) -->
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="https" />
+        </intent>
+        <!-- text-receiving apps for the share sheet -->
+        <intent>
+            <action android:name="android.intent.action.SEND" />
+            <data android:mimeType="text/plain" />
+        </intent>
+    </queries>
+
     <application
+        android:name=".ScavengerHuntApp"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -11,15 +40,36 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ScavengerHunt">
+
+        <!-- launcher / login -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".SignUpActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+
+        <activity android:name=".HuntListActivity"
+            android:exported="false" />
+
+        <activity android:name=".HuntDetailActivity"
+            android:exported="false"
+            android:parentActivityName=".HuntListActivity" />
+
+        <activity android:name=".AddEditHuntActivity"
+            android:exported="false"
+            android:parentActivityName=".HuntListActivity" />
+
+        <activity android:name=".AboutActivity"
+            android:exported="false"
+            android:parentActivityName=".HuntListActivity" />
+
     </application>
 
 </manifest>

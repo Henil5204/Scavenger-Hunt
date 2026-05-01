@@ -1,0 +1,8 @@
+<!-- compass-style logo. used on the login screen behind the app name. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp" android:height="48dp"
+    android:viewportWidth="24" android:viewportHeight="24"
+    android:tint="@color/brand_primary">
+    <path android:fillColor="@android:color/white"
+        android:pathData="M12,2C6.5,2 2,6.5 2,12s4.5,10 10,10 10,-4.5 10,-10S17.5,2 12,2zM14.83,14.83L6,18l3.17,-8.83L18,6l-3.17,8.83z" />
+</vector>
